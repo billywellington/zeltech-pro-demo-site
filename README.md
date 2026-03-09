@@ -111,7 +111,7 @@ All stock images are from free sources. The developer should download high-resol
 
 | Asset | Google Drive Link | Usage |
 |-------|-------------------|-------|
-| Logo (for nav & footer) | **https://drive.google.com/drive/folders/1Jf4Dw4mHY2o5adBrvfblQxrghX2UIrtt?usp=drive_link** | Nav bar and footer — use transparent PNG, height 50px |
+| Logo (for nav & footer) | **[Link](https://drive.google.com/drive/folders/1Jf4Dw4mHY2o5adBrvfblQxrghX2UIrtt?usp=drive_link)** | Nav bar and footer — use transparent PNG, height 50px |
 
 **Important:** The logo is **clickable on every page** and should always redirect to the Homepage.
 
