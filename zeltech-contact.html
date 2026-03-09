@@ -234,10 +234,13 @@ a{text-decoration:none;color:inherit}
 <!-- MAP -->
 <div class="map-section" style="padding-top:80px">
   <h2 class="section-heading" style="margin-bottom:32px">Our Location</h2>
-  <div class="map-wrapper" style="display:flex;align-items:center;justify-content:center;background:var(--light-bg);flex-direction:column;gap:12px">
-    <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),#0090DD);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(1,170,255,0.25)"><svg width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-    <p style="font-size:16px;font-weight:700;color:var(--dark)">10 Van Ryneveld Street, Strand, Cape Town, 7130</p>
-    <p style="font-size:12px;color:#94A3B8;max-width:400px;text-align:center">Developer: Embed Google Map here using the address above.<br>Use iframe from maps.google.com/maps?q=10+Van+Ryneveld+Street,+Strand,+Cape+Town,+7130</p>
+  <div class="map-wrapper">
+    <iframe
+      title="Zeltech Pro location map"
+      src="https://maps.google.com/maps?q=10+Van+Ryneveld+Street,+Strand,+Cape+Town,+7130&z=15&output=embed"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
 
