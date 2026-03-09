@@ -32,9 +32,9 @@ a { text-decoration: none; color: inherit; }
   background: var(--white); border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 8px rgba(0,0,0,0.04);
 }
-.nav-logo img { height: 50px; width: auto; }
+.nav-logo img { height: 50px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links li a { font-size: 16px; font-weight: 500; color: var(--text); transition: color 0.2s; }
+.nav-links li a { font-size: 16px; font-weight: 500; color: var(--text); transition: color 0.2s; white-space: nowrap; }
 .nav-links li a:hover, .nav-links li a.active { color: var(--cyan); font-weight: 600; }
 .nav-links li .dd { font-size: 11px; margin-left: 4px; }
 .nav-btn {
@@ -114,8 +114,6 @@ a { text-decoration: none; color: inherit; }
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 28px; max-width: 1100px; margin: 0 auto; justify-content: center;
 }
-.services-bottom-row { display: flex; gap: 28px; justify-content: center; max-width: 1100px; margin: 28px auto 0; }
-.services-bottom-row .service-card { width: calc(33.333% - 14px); }
 .service-card {
   background: var(--light-bg); border: 1px solid var(--border);
   border-radius: 14px; padding: 32px 20px 28px;
@@ -317,6 +315,12 @@ a { text-decoration: none; color: inherit; }
 .fbl a:hover { color: var(--cyan); }
 
 /* ============ RESPONSIVE ============ */
+@media (max-width: 1280px) and (min-width: 769px) {
+  .nav { padding: 0 28px; }
+  .nav-links { gap: 22px; }
+  .nav-links li a { font-size: 14px; white-space: nowrap; }
+  .nav-btn { padding: 10px 20px; font-size: 14px; }
+}
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -324,10 +328,20 @@ a { text-decoration: none; color: inherit; }
   .hero h1 { font-size: 40px; }
   .section-heading { font-size: 32px; }
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 40px; }
+  .footer-main .footer-col:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .footer-main .footer-col:nth-child(2) { grid-column: 1; grid-row: 2; }
+  .footer-main .footer-col:nth-child(3) { grid-column: 2; grid-row: 1; }
+  .footer-main .footer-col:nth-child(4) { grid-column: 2; grid-row: 2; }
+}
 @media (max-width: 768px) {
-  .nav { padding: 0 24px; height: 70px; }
+  .nav { padding: 0 14px; height: 70px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; }
+  .nav-logo { justify-self: start; }
+  .nav-logo img { height: 42px; width: auto; }
   .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
+  .nav-hamburger { display: flex; grid-column: 2; justify-self: center; }
+  .nav-btn { padding: 10px 14px; font-size: 12px; }
   .nav-links.open {
     display: flex; flex-direction: column; position: absolute;
     top: 70px; left: 0; right: 0; background: var(--white);
@@ -340,7 +354,7 @@ a { text-decoration: none; color: inherit; }
   .hero-tagline { font-size: 11px; }
   .hero-subtitle { font-size: 15px; }
   .hero-buttons { flex-direction: column; align-items: center; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
   .why-grid { grid-template-columns: 1fr 1fr; }
   /* responsive handled by JS */
   .testimonials-wrapper { padding: 0 50px; }
@@ -351,11 +365,14 @@ a { text-decoration: none; color: inherit; }
   .footer-main { flex-direction: column; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+@media (max-width: 560px) {
+  .nav-logo img { height: 42px; width: 52px; object-fit: cover; object-position: left center; }
+}
 @media (max-width: 480px) {
   .services-grid { grid-template-columns: 1fr; max-width: 320px; }
   .why-grid { grid-template-columns: 1fr; max-width: 320px; }
   .hero h1 { font-size: 28px; }
-  .nav-btn { padding: 10px 20px; font-size: 13px; }
+  .nav-btn { padding: 10px 14px; font-size: 12px; }
 }
 
 /* ============ ANIMATIONS ============ */
@@ -424,8 +441,6 @@ a { text-decoration: none; color: inherit; }
       <p>SABS-approved degreasers, detergents, and specialised chemicals for heavy-duty commercial cleaning.</p>
       <button class="card-btn">See Chemicals</button>
     </div>
-  </div>
-  <div class="services-bottom-row">
     <div class="service-card">
       <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7h2a3 3 0 0 1 6 0h2c0-2.76-2.24-5-5-5zM5.5 8A1.5 1.5 0 0 0 4 9.5v1A1.5 1.5 0 0 0 5.5 12H6v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-7h.5a1.5 1.5 0 0 0 1.5-1.5v-1A1.5 1.5 0 0 0 18.5 8h-13z"/></svg></div>
       <h3>Cleaning Services</h3>
