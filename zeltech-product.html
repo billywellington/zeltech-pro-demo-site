@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Zeltech Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --cyan:#01AAFF; --cyan-hover:#0095E0; --dark:#1B2431; --text:#4A5568; --light-bg:#F7FAFC; --border:#E2E8F0; --white:#FFFFFF; --whatsapp:#25D366; --muted:#94A3B8; }
+*{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth} body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--white)} img{max-width:100%;height:auto} a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:90px;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(0,0,0,0.04)}
+.nav-logo img{height:50px;width:auto}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none} .nav-links li a{font-size:16px;font-weight:500;color:var(--text);transition:color 0.2s} .nav-links li a:hover,.nav-links li a.active{color:var(--cyan);font-weight:600} .nav-links li .dd{font-size:11px;margin-left:4px}
+.nav-btn{padding:12px 28px;font-size:15px;font-weight:700;border:none;border-radius:50px;cursor:pointer;background:var(--cyan);color:var(--white);font-family:'Poppins',sans-serif;box-shadow:0 4px 14px rgba(1,170,255,0.35);transition:background 0.2s,transform 0.2s} .nav-btn:hover{background:var(--cyan-hover);transform:translateY(-1px)}
+.nav-hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px} .nav-hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px;transition:0.3s}
+
+/* BREADCRUMB BAR */
+.breadcrumb-bar { padding: 16px 60px; background: var(--light-bg); border-bottom: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+.breadcrumb-bar a { color: var(--text); font-weight: 500; } .breadcrumb-bar a:hover { color: var(--cyan); }
+.breadcrumb-bar .sep { margin: 0 8px; color: var(--border); }
+.breadcrumb-bar .current { color: var(--cyan); font-weight: 600; }
+
+/* PRODUCT DETAIL */
+.product-section { padding: 60px; max-width: 1200px; margin: 0 auto; }
+.product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.product-image-wrap { background: var(--light-bg); border: 1px solid var(--border); border-radius: 14px; padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 420px; }
+.product-image-wrap img { max-height: 340px; object-fit: contain; }
+
+.product-info { padding-top: 10px; }
+.product-info h1 { font-size: 28px; font-weight: 700; color: var(--dark); line-height: 1.35; margin-bottom: 20px; }
+.product-info .product-desc { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 28px; }
+.product-info .product-sku { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+.product-info .product-sku strong { color: var(--text); }
+
+/* QUOTE BUTTON */
+.quote-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 38px; font-size: 16px; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; background: var(--cyan); color: var(--white); font-family: 'Poppins', sans-serif; box-shadow: 0 4px 16px rgba(1,170,255,0.4); transition: background 0.2s, transform 0.2s; margin-bottom: 16px; }
+.quote-btn:hover { background: var(--cyan-hover); color: var(--white); transform: translateY(-2px); }
+.quote-btn svg { width: 20px; height: 20px; fill: var(--white); }
+
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; font-size: 15px; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; background: var(--whatsapp); color: var(--white); font-family: 'Poppins', sans-serif; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s; }
+.whatsapp-btn:hover { color: var(--white); transform: translateY(-2px); }
+.whatsapp-btn svg { width: 18px; height: 18px; fill: var(--white); }
+
+.product-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+
+/* FEATURES */
+.product-features { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.product-features h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+.feature-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: var(--text); line-height: 1.6; }
+.feature-item svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; }
+
+/* TABS */
+.tabs-section { padding: 0 60px 80px; max-width: 1200px; margin: 0 auto; }
+.tabs-nav { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 32px; }
+.tab-btn { padding: 14px 28px; font-size: 15px; font-weight: 600; color: var(--muted); background: none; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+.tab-btn:hover { color: var(--dark); }
+.tab-btn.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-content h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+.tab-content p { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 12px; }
+.tab-content ul { list-style: none; padding: 0; }
+.tab-content li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 14px; color: var(--text); line-height: 1.65; }
+.tab-content li svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; fill: var(--cyan); }
+.dimensions-table { width: 100%; max-width: 500px; border-collapse: collapse; }
+.dimensions-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid var(--border); }
+.dimensions-table td:first-child { font-weight: 600; color: var(--dark); width: 200px; }
+
+/* BACK LINK */
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 0; } .back-link:hover { color: var(--cyan-hover); }
+
+/* FOOTER */
+.footer{padding:64px 60px 0;background:var(--light-bg);border-top:1px solid var(--border)} .footer-main{display:flex;gap:40px;padding-bottom:44px;max-width:1280px;margin:0 auto} .footer-col{flex:1} .footer-col:first-child{flex:1.3} .footer-logo{margin-bottom:18px} .footer-logo img{height:50px;width:auto} .footer-tagline{font-size:14px;color:var(--text);line-height:1.75;margin-bottom:24px;max-width:300px} .social-icons{display:flex;gap:12px} .social-icon{width:40px;height:40px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;transition:background 0.2s,transform 0.2s} .social-icon:hover{background:var(--cyan-hover);transform:translateY(-2px)} .social-icon svg{width:18px;height:18px;fill:var(--white)} .footer-heading{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:20px} .footer-links{list-style:none} .footer-links li{margin-bottom:12px} .footer-links li a{font-size:14px;color:var(--text);transition:color 0.2s} .footer-links li a:hover{color:var(--cyan)} .fci{display:flex;align-items:flex-start;gap:10px;margin-bottom:16px} .fci svg{width:18px;height:18px;fill:var(--cyan);flex-shrink:0;margin-top:2px} .fci span{font-size:14px;color:var(--text);line-height:1.5} .footer-bottom{border-top:1px solid var(--border);padding:22px 0;display:flex;justify-content:space-between;align-items:center;max-width:1280px;margin:0 auto} .footer-copyright{font-size:13px;color:var(--muted)} .fbl{display:flex;gap:24px} .fbl a{font-size:13px;color:var(--muted);transition:color 0.2s} .fbl a:hover{color:var(--cyan)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav{padding:0 24px;height:70px} .nav-links{display:none} .nav-hamburger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+  .breadcrumb-bar{padding:14px 24px}
+  .product-section{padding:32px 24px}
+  .product-layout{grid-template-columns:1fr;gap:32px}
+  .product-image-wrap{min-height:280px;padding:24px}
+  .product-info h1{font-size:22px}
+  .tabs-section{padding:0 24px 60px}
+  .tabs-nav{overflow-x:auto} .tab-btn{padding:12px 20px;font-size:13px;white-space:nowrap}
+  .footer{padding:40px 24px 0} .footer-main{flex-direction:column;gap:32px} .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/nav/zeltech-pro-logo.png" alt="Zeltech Pro"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="zeltech-about.html">About Us</a></li>
+    <li><a href="#" onclick="return false" class="active" style="cursor:default">Products &amp; Services <span class="dd">▾</span></a></li>
+    <li><a href="zeltech-contact.html">Contact Us</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+  <a href="zeltech-contact.html" class="nav-btn" style="text-decoration:none">Get A Quote</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="zeltech-hygiene.html">Hygiene Solutions</a><span class="sep">›</span>
+  <span id="breadcrumbRange"></span>
+  <span class="current" id="breadcrumbProduct"></span>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<section class="product-section">
+  <div class="product-layout">
+    <div class="product-image-wrap">
+      <img id="productImg" src="" alt="">
+    </div>
+    <div class="product-info">
+      <h1 id="productName"></h1>
+      <p class="product-desc" id="productDesc"></p>
+
+      <div class="product-buttons">
+        <a id="quoteBtn" href="#" class="quote-btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Get A Quote
+        </a>
+        <a id="whatsappBtn" href="#" class="whatsapp-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+
+      <div class="product-features">
+        <h3>Key Features</h3>
+        <div class="feature-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Complete touch-free or manual operation</div>
+        <div class="feature-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Comes with a Lifetime warranty on all working parts</div>
+        <div class="feature-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Perfect for high-traffic commercial environments</div>
+        <div class="feature-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Available in multiple finishes across our product ranges</div>
+        <div class="feature-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hygienically sealed refills for germ-free operation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<section class="tabs-section">
+  <div class="tabs-nav">
+    <button class="tab-btn active" onclick="showTab('desc')">Description</button>
+    <button class="tab-btn" onclick="showTab('dims')">Product Dimensions</button>
+    <button class="tab-btn" onclick="showTab('finish')">Available Finishes</button>
+  </div>
+
+  <div class="tab-content active" id="tab-desc">
+    <h3 id="tabDescTitle"></h3>
+    <p id="tabDescText"></p>
+    <ul>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Sensor-operated or manual dispensing depending on model</li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Each refill comes with its own pump — no clogging</li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Dispenses foaming soap, antibacterial soap, and hand sanitiser</li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Controlled dosing reduces usage by up to 60%</li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#01AAFF" opacity="0.12"/><path d="M7 12l3 3 7-7" stroke="#01AAFF" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Hygienically sealed refill prevents contamination</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="tab-dims">
+    <h3>Product Dimensions</h3>
+    <table class="dimensions-table">
+      <tr><td>Product Dimension</td><td>17 × 14 × 33 cm</td></tr>
+      <tr><td>Pack Size</td><td>1</td></tr>
+      <tr><td>Shipping Dimension</td><td>17 × 14 × 33 cm</td></tr>
+      <tr><td>Shipping Weight</td><td>2.2 Kg</td></tr>
+    </table>
+    <p style="margin-top:20px;font-size:13px;color:var(--muted)">Dimensions are approximate and may vary by finish. Contact us for exact specifications.</p>
+  </div>
+
+  <div class="tab-content" id="tab-finish">
+    <h3>Available Finishes</h3>
+    <p>This product is available across our full range of finishes. Select the range that suits your washroom environment:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;">
+      <a href="zeltech-range-black.html" style="padding:10px 22px;font-size:13px;font-weight:600;border-radius:50px;background:var(--dark);color:var(--white);transition:transform 0.2s;">Black Range</a>
+      <a href="zeltech-range-satin.html" style="padding:10px 22px;font-size:13px;font-weight:600;border-radius:50px;background:#B8B8B8;color:var(--white);transition:transform 0.2s;">Satin Range</a>
+      <a href="zeltech-range-white.html" style="padding:10px 22px;font-size:13px;font-weight:600;border-radius:50px;background:var(--white);color:var(--dark);border:2px solid var(--border);transition:transform 0.2s;">White Range</a>
+      <a href="zeltech-range-stainless-steel.html" style="padding:10px 22px;font-size:13px;font-weight:600;border-radius:50px;background:linear-gradient(135deg,#C0C0C0,#E8E8E8);color:var(--dark);transition:transform 0.2s;">Stainless Steel</a>
+      <a href="zeltech-range-matt-black-steel.html" style="padding:10px 22px;font-size:13px;font-weight:600;border-radius:50px;background:#333;color:var(--white);transition:transform 0.2s;">Matt Black Steel</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-col">
+      <div class="footer-logo"><a href="index.html"><img src="assets/logos/nav/zeltech-pro-logo.png" alt="Zeltech Pro"></a></div>
+      <p class="footer-tagline">Professional hygiene, cleaning, and pest control solutions based in Strand and serving the Western Cape.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+        <a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+        <a href="https://wa.me/27616808176" class="social-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h3 class="footer-heading">Quick Links</h3><ul class="footer-links"><li><a href="zeltech-about.html">About Us</a></li><li><a href="#">Warranty</a></li><li><a href="zeltech-contact.html">Get A Quote</a></li><li><a href="zeltech-contact.html">Contact Us</a></li><li><a href="zeltech-terms.html">Terms &amp; Conditions</a></li></ul></div>
+    <div class="footer-col"><h3 class="footer-heading">Products &amp; Services</h3><ul class="footer-links"><li><a href="zeltech-hygiene.html">Hygiene Solutions</a></li><li><a href="#">Consumables</a></li><li><a href="#">Industrial Chemicals</a></li><li><a href="#">Cleaning Services</a></li><li><a href="#">Pest Control</a></li></ul></div>
+    <div class="footer-col"><h3 class="footer-heading">Contact Us</h3><div class="fci"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>087 164 0156</span></div><div class="fci"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ae8e5e5e1e3e4edf9caf0efe6feefe9e2faf8e5a4e9e5e7">[email&#160;protected]</a></span></div><div class="fci"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>10 Van Ryneveld Street<br>Strand, Cape Town</span></div><div class="fci"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg><span>Monday – Friday<br>08:00 – 16:00</span></div></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copyright">© 2026 Zeltech Pro. All Rights Reserved. Built by Infinity CDS</span><div class="fbl"><a href="zeltech-privacy.html">Privacy Policy</a><a href="zeltech-cookies.html">Cookie Policy</a></div></div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Read URL params and populate the page
+var params = new URLSearchParams(window.location.search);
+var productName = params.get('name') || 'Hygiene Product';
+var productImg = params.get('img') || '';
+var productDesc = params.get('desc') || 'Professional-grade washroom product designed for commercial environments.';
+var rangeSlug = params.get('range') || '';
+
+// Range name mapping
+var rangeNames = {
+  'black': 'Black Range',
+  'satin': 'Satin Range',
+  'white': 'White Range',
+  'stainless-steel': 'Stainless Steel Range',
+  'matt-black-steel': 'Matt Black Steel Range'
+};
+var rangeName = rangeNames[rangeSlug] || '';
+
+// Set page title
+document.title = productName + ' — Zeltech Pro';
+
+// Populate elements
+document.getElementById('productName').textContent = productName;
+document.getElementById('productImg').src = productImg;
+document.getElementById('productImg').alt = productName;
+document.getElementById('productDesc').textContent = productDesc;
+document.getElementById('tabDescTitle').textContent = productName;
+document.getElementById('tabDescText').textContent = productDesc;
+
+// Breadcrumb
+if (rangeName && rangeSlug) {
+  document.getElementById('breadcrumbRange').innerHTML = '<a href="zeltech-range-' + rangeSlug + '.html">' + rangeName + '</a><span class="sep">›</span>';
+}
+document.getElementById('breadcrumbProduct').textContent = productName;
+
+// Get A Quote button — links to contact page with pre-filled message
+var quoteMessage = encodeURIComponent("Hi, I'd like to request a quote for the following product:\n\nProduct: " + productName + "\n\nPlease provide pricing and availability. Thank you.");
+document.getElementById('quoteBtn').href = 'zeltech-contact.html?message=' + quoteMessage;
+
+// WhatsApp button — pre-filled message
+var waMessage = encodeURIComponent("Hi Zeltech Pro, I'd like a quote for: " + productName + ". Please let me know pricing and availability. Thanks!");
+document.getElementById('whatsappBtn').href = 'https://wa.me/27616808176?text=' + waMessage;
+
+// Tab switching
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(function(t) { t.classList.remove('active')
