@@ -39,9 +39,9 @@
 .quote-btn:hover { background: var(--cyan-hover); color: var(--white); transform: translateY(-2px); }
 .quote-btn svg { width: 20px; height: 20px; fill: var(--white); }
 
-.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; font-size: 15px; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; background: var(--whatsapp); color: var(--white); font-family: 'Poppins', sans-serif; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s; }
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 38px; font-size: 16px; font-weight: 700; border: none; border-radius: 50px; cursor: pointer; background: var(--whatsapp); color: var(--white); font-family: 'Poppins', sans-serif; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: background 0.2s, transform 0.2s; }
 .whatsapp-btn:hover { color: var(--white); transform: translateY(-2px); }
-.whatsapp-btn svg { width: 18px; height: 18px; fill: var(--white); }
+.whatsapp-btn svg { width: 20px; height: 20px; fill: var(--white); }
 
 .product-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
 
@@ -149,9 +149,9 @@
 <!-- TABS -->
 <section class="tabs-section">
   <div class="tabs-nav">
-    <button class="tab-btn active" onclick="showTab('desc')">Description</button>
-    <button class="tab-btn" onclick="showTab('dims')">Product Dimensions</button>
-    <button class="tab-btn" onclick="showTab('finish')">Available Finishes</button>
+    <button class="tab-btn active" onclick="showTab('desc',this)">Description</button>
+    <button class="tab-btn" onclick="showTab('dims',this)">Product Dimensions</button>
+    <button class="tab-btn" onclick="showTab('finish',this)">Available Finishes</button>
   </div>
 
   <div class="tab-content active" id="tab-desc">
@@ -256,12 +256,21 @@ document.getElementById('quoteBtn').href = 'get-a-quote.html?message=' + quoteMe
 var waMessage = encodeURIComponent("Hi Zeltech Pro, I'd like a quote for: " + productName + ". Please let me know pricing and availability. Thanks!");
 document.getElementById('whatsappBtn').href = 'https://wa.me/27616808176?text=' + waMessage;
 
+// Hide "Available Finishes" tab for individual range pages
+var rangeSlugs = ['black','satin','white','stainless-steel','matt-black-steel'];
+if (rangeSlugs.indexOf(rangeSlug) !== -1) {
+  var finishBtn = document.querySelector('.tab-btn[onclick*="finish"]');
+  var finishTab = document.getElementById('tab-finish');
+  if (finishBtn) finishBtn.style.display = 'none';
+  if (finishTab) finishTab.style.display = 'none';
+}
+
 // Tab switching
-function showTab(id) {
-  document.querySelectorAll('.tab-content').forEach(function(t) { t.classList.remove('active')});
-  document.getElementById(id).classList.add('active');
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(function(t) { t.classList.remove('active'); });
+  document.getElementById('tab-' + id).classList.add('active');
   document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-  event.target.classList.add('active');
+  btn.classList.add('active');
 }
 </script>
 <script>document.querySelectorAll(".nav-dropdown-toggle").forEach(function(t){t.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();var dd=t.parentElement;dd.classList.toggle("open");document.querySelectorAll(".nav-dropdown").forEach(function(d){if(d!==dd)d.classList.remove("open")})})});document.addEventListener("click",function(e){if(!e.target.closest(".nav-dropdown")){document.querySelectorAll(".nav-dropdown.open").forEach(function(d){d.classList.remove("open")})}});</script>
