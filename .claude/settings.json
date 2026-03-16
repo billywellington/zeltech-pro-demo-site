@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE_31beaea9236efa5f__ sed:*)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/hand-sanitiser-dispensers/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Hand%20Sanitiser%20Dispensers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/paper-towel-dispensers/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Paper%20Towel%20Dispensers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/hand-dryers/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Hand%20Dryers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/air-fresheners/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Air%20Fresheners.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/toilet-roll-holders/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Toilet%20Roll%20Holders.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/sanitary-bins/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Sanitary%20Bins.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/hand-sanitiser-stands/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Hand%20Sanitiser%20Stands.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/condom-dispensers/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Condom%20Dispensers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/free-standing-waste-bins/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Free%20Standing%20Waste%20Bins.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/wall-mounted-waste-bins/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Wall%20Mounted%20Waste%20Bins.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/hygiene-bag-dispensers/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Hygiene%20Bag%20Dispensers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/seat-sanitiser-dispenser/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Seat%20Sanitiser%20Dispensers.\"\"|' zeltech-hygiene.html)",
+      "Bash(sed -i 's|href=\"\"https://www.new.zeltechpro.com/product-category/hygiene/urinal-and-toilet-cleaning/\"\"|href=\"\"get-a-quote.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20Urinal%20and%20Toilet%20Cleaning.\"\"|' zeltech-hygiene.html)",
+      "Bash(__NEW_LINE_31beaea9236efa5f__ echo:*)",
+      "Bash(python /tmp/gen_cat_pages.py)",
+      "Bash(cp /tmp/gen_cat_pages.py ./gen_cat_pages.py)",
+      "Bash(python gen_cat_pages.py)",
+      "Read(//c/tmp/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\billy\\Desktop\\ZeltechProDemoSite\\zeltech-pro-demo-site\\s\\.btn-whatsapp{padding:16px 36px\\.btn-whatsapp{padding:16px 38px",
+      "c:\\Users\\billy\\Desktop\\ZeltechProDemoSite\\zeltech-pro-demo-site",
+      "C:\\Users\\billy\\Desktop\\ZeltechProDemoSite\\zeltech-pro-demo-site"
+    ]
+  }
+}
