@@ -257,8 +257,8 @@ document.getElementById('quoteBtn').href = 'get-a-quote.html?message=' + quoteMe
 var waMessage = encodeURIComponent("Hi Zeltech Pro, I'd like a quote for: " + productName + ". Please let me know pricing and availability. Thanks!");
 document.getElementById('whatsappBtn').href = 'https://wa.me/27616808176?text=' + waMessage;
 
-// Hide "Available Finishes" tab for individual range pages
-var rangeSlugs = ['black','satin','white','stainless-steel','matt-black-steel'];
+// Hide "Available Finishes" tab for range pages and consumables
+var rangeSlugs = ['black','satin','white','stainless-steel','matt-black-steel','consumables'];
 if (rangeSlugs.indexOf(rangeSlug) !== -1) {
   var finishBtn = document.querySelector('.tab-btn[onclick*="finish"]');
   var finishTab = document.getElementById('tab-finish');
