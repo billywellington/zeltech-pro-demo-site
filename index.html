@@ -268,14 +268,15 @@ a { text-decoration: none; color: inherit; }
 .cta h2 { font-size: 40px; font-weight: 700; color: var(--white); margin-bottom: 16px; text-shadow: 0 2px 16px rgba(0,0,0,0.25); }
 .cta-subtitle { font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.65; margin-bottom: 34px; }
 .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-buttons .btn-primary, .cta-buttons .btn-whatsapp { min-width: 220px; justify-content: center; text-align: center; }
 .btn-whatsapp {
-  padding: 16px 36px; font-size: 15px; font-weight: 700;
+  padding: 16px 38px; font-size: 15px; font-weight: 700;
   border: none; border-radius: 50px; cursor: pointer;
   background: var(--whatsapp); color: var(--white);
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  display: flex; align-items: center; gap: 10px;
-  transition: transform 0.2s;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: background 0.2s, transform 0.2s;
 }
 .btn-whatsapp:hover { transform: translateY(-2px); }
 .btn-whatsapp svg { width: 20px; height: 20px; fill: var(--white); }
