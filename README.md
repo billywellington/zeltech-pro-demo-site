@@ -20,7 +20,7 @@ A **live demo site** has been built to illustrate exactly what the final website
 
 | Page | Demo Link | Status |
 |------|-----------|--------|
-| Homepage | [View Demo](https://zeltech-pro-demo-site.pages.dev/zeltech-homepage.html) | ✅ Complete |
+| Homepage | [View Demo](https://zeltech-pro-demo-site.pages.dev/index.html) | ✅ Complete |
 | About Us | [View Demo](https://zeltech-pro-demo-site.pages.dev/zeltech-about.html) | ✅ Complete |
 | Contact Us | [View Demo](https://zeltech-pro-demo-site.pages.dev/zeltech-contact.html) | ✅ Complete |
 | Terms & Conditions | [View Demo](https://zeltech-pro-demo-site.pages.dev/zeltech-terms.html) | ✅ Complete |
