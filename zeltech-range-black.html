@@ -22,10 +22,10 @@
 .section{padding:80px 60px} .section-heading{text-align:center;font-size:38px;font-weight:700;color:var(--dark);margin-bottom:16px}
 .section-subtitle{text-align:center;font-size:16px;color:var(--text);line-height:1.65;margin-bottom:56px;max-width:700px;margin-left:auto;margin-right:auto}
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin:0 auto}
-.product-card{background:var(--light-bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s}
+.product-card{background:var(--light-bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column}
 .product-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.08)}
 .product-card-img{height:220px;width:100%;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
-.product-card-body{padding:20px 20px 24px;text-align:center}
+.product-card-body{padding:20px 20px 24px;text-align:center;display:flex;flex-direction:column;flex:1}.product-card-body .card-btn{margin-top:auto}
 .product-card h3{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px;line-height:1.4}
 .product-card p{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .card-btn{padding:10px 22px;font-size:13px;font-weight:600;border:none;border-radius:50px;cursor:pointer;background:var(--cyan);color:var(--white);font-family:'Poppins',sans-serif;box-shadow:0 4px 14px rgba(1,170,255,0.35);transition:background 0.2s,transform 0.2s;display:inline-block} .card-btn:hover{background:var(--cyan-hover);color:var(--white);transform:translateY(-1px)}
@@ -69,7 +69,7 @@
     <div class="product-card">
       <div class="product-card-img" style="background-image:url('https://www.new.zeltechpro.com/wp-content/uploads/2024/12/1100ml-Automatic-Foam-Dispenser.png')"></div>
       <div class="product-card-body">
-        <h3>1100ml Automatic Foam Dispenser — Black</h3>
+        <h3>1100ml Automatic Foam Dispenser</h3>
         <p>Touch-free automatic foam dispenser for modern washroom environments.</p>
         <a href="zeltech-product.html?name=1100ml%20Automatic%20Foam%20Dispenser%20%E2%80%94%20Black&img=https://www.new.zeltechpro.com/wp-content/uploads/2024/12/1100ml-Automatic-Foam-Dispenser.png&desc=Touch-free%20automatic%20foam%20dispenser%20for%20modern%20washroom%20environments.&range=black" class="card-btn">View Product</a>
       </div>
@@ -77,7 +77,7 @@
     <div class="product-card">
       <div class="product-card-img" style="background-image:url('https://www.new.zeltechpro.com/wp-content/uploads/2024/12/800ml-Foam-Soap-Dispenser.png')"></div>
       <div class="product-card-body">
-        <h3>800ml Foam Soap Dispenser — Black</h3>
+        <h3>800ml Foam Soap Dispenser</h3>
         <p>Reliable foam soap dispenser designed for easy refilling and daily use.</p>
         <a href="zeltech-product.html?name=800ml%20Foam%20Soap%20Dispenser%20%E2%80%94%20Black&img=https://www.new.zeltechpro.com/wp-content/uploads/2024/12/800ml-Foam-Soap-Dispenser.png&desc=Reliable%20foam%20soap%20dispenser%20designed%20for%20easy%20refilling%20and%20daily%20use.&range=black" class="card-btn">View Product</a>
       </div>
@@ -85,7 +85,7 @@
     <div class="product-card">
       <div class="product-card-img" style="background-image:url('https://www.new.zeltechpro.com/wp-content/uploads/2024/12/400ml-Manual-Spray-Dispenser.png')"></div>
       <div class="product-card-body">
-        <h3>400ml Manual Spray Dispenser — Black</h3>
+        <h3>400ml Manual Spray Dispenser</h3>
         <p>Versatile manual spray dispenser suitable for soap or sanitiser.</p>
         <a href="zeltech-product.html?name=400ml%20Manual%20Spray%20Dispenser%20%E2%80%94%20Black&img=https://www.new.zeltechpro.com/wp-content/uploads/2024/12/400ml-Manual-Spray-Dispenser.png&desc=Versatile%20manual%20spray%20dispenser%20suitable%20for%20soap%20or%20sanitiser.&range=black" class="card-btn">View Product</a>
       </div>
@@ -93,7 +93,7 @@
     <div class="product-card">
       <div class="product-card-img" style="background-image:url('https://www.new.zeltechpro.com/wp-content/uploads/2024/12/1300ml-Flex-Hand-Sanitiser-Manual-Dispenser.png')"></div>
       <div class="product-card-body">
-        <h3>1300ml Flex Hand Sanitiser Dispenser — Black</h3>
+        <h3>1300ml Flex Hand Sanitiser Dispenser</h3>
         <p>A versatile unit that can be used as a soap, hand sanitiser or body wash dispenser.</p>
         <a href="zeltech-product.html?name=1300ml%20Flex%20Hand%20Sanitiser%20Dispenser%20%E2%80%94%20Black&img=https://www.new.zeltechpro.com/wp-content/uploads/2024/12/1300ml-Flex-Hand-Sanitiser-Manual-Dispenser.png&desc=A%20versatile%20unit%20that%20can%20be%20used%20as%20a%20soap%2C%20hand%20sanitiser%20or%20body%20wash%20dispenser.&range=black" class="card-btn">View Product</a>
       </div>
@@ -101,7 +101,7 @@
     <div class="product-card">
       <div class="product-card-img" style="background-image:url('https://www.new.zeltechpro.com/wp-content/uploads/2024/12/500ml-Flex-Manual-Hand-Sanitiser-Dispenser.png')"></div>
       <div class="product-card-body">
-        <h3>500ml Flex Manual Hand Sanitiser Dispenser — Black</h3>
+        <h3>500ml Flex Manual Hand Sanitiser Dispenser</h3>
         <p>Compact manual dispenser ideal for smaller spaces and reception areas.</p>
         <a href="zeltech-product.html?name=500ml%20Flex%20Manual%20Hand%20Sanitiser%20Dispenser%20%E2%80%94%20Black&img=https://www.new.zeltechpro.com/wp-content/uploads/2024/12/500ml-Flex-Manual-Hand-Sanitiser-Dispenser.png&desc=Compact%20manual%20dispenser%20ideal%20for%20smaller%20spaces%20and%20reception%20areas.&range=black" class="card-btn">View Product</a>
       </div>
