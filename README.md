@@ -107,6 +107,49 @@ All stock images are from free sources. The developer should download high-resol
 | ----------- | ------------------------------------ | --------------- |
 | Page banner | Solid dark navy background (#1B2431) | No image needed |
 
+### Hygiene Solutions
+
+| Placement | Description | Source |
+|---|---|---|
+| Page banner | Dark overlay hero banner | Solid dark overlay on themed background |
+| CTA background | Person washing hands with soap — hygiene theme | [Pexels](https://www.pexels.com/photo/a-person-washing-hands-4371351/) |
+
+### Consumables
+
+| Placement | Description | Source |
+|---|---|---|
+| Page banner | Dark overlay hero banner | Solid dark overlay on themed background |
+| CTA background | Organised cleaning supplies — buckets, sprays, gloves | [Pexels](https://www.pexels.com/photo/cleaning-supplies-3616735/) |
+
+### Industrial Chemicals
+
+| Placement | Description | Source |
+|---|---|---|
+| Page banner | Dark overlay hero banner | Solid dark overlay on themed background |
+| CTA background | Chemicals in laboratory — bottles on shelves | [Pexels](https://www.pexels.com/photo/chemicals-in-laboratory-3735700/) |
+
+### Cleaning Services
+
+| Placement | Description | Source |
+|---|---|---|
+| Page banner | Dark overlay hero banner | Solid dark overlay on themed background |
+| CTA background | Group of people cleaning a dining room — cleaning crew in uniform | [Pexels](https://www.pexels.com/photo/group-of-people-cleaning-a-dining-room-6197108/) |
+
+### Pest Control
+
+| Placement | Description | Source |
+|---|---|---|
+| Page banner | Dark overlay hero banner | [Unsplash](https://unsplash.com/photos/photo-1632236707498-89f25d18a523) |
+| CTA background | Person in grey sweater mopping and cleaning floor — pest treatment | [Pexels](https://www.pexels.com/photo/person-in-gray-sweater-mopping-and-cleaning-the-floor-6196566/) |
+| Card: Rodent Control | Grey mouse on wooden surface | [Unsplash](https://unsplash.com/photos/QNaBO0oHeyo) |
+| Card: Cockroach Treatment | Cockroach close-up | [Unsplash](https://unsplash.com/photos/D9kEc8Og-Y4) |
+| Card: Ant Control | Close-up of black ants | [Unsplash](https://unsplash.com/photos/k2_xMIqPUW4) |
+| Card: Termite Protection | Termite macro on soil | [Unsplash](https://unsplash.com/photos/nvpiA6WS3zU) |
+| Card: Bed Bug & Flea Control | Bed bug on white sheet | [Unsplash](https://unsplash.com/photos/W2c4aS6d3BE) |
+| Card: Mosquito & Fly Control | Mosquito close-up | [Unsplash](https://unsplash.com/photos/iuJgEBVSRIo) |
+| Card: Bird Proofing | Pigeons on building ledge | [Unsplash](https://unsplash.com/photos/cxeYSi2g8YY) |
+| Card: Eco-Friendly Solutions | Person spraying in green field | [Unsplash](https://unsplash.com/photos/xEZaZ577Q-Q) |
+
 ### Image Formatting Notes
 
 - **Hero/CTA images**: Use as `background-image` with `background-size: cover; background-position: center`
